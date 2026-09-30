@@ -1,0 +1,108 @@
+/* 全局样式 - 科技蓝主题 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: #f0f2f5;
+}
+
+#app {
+  height: 100vh;
+}
+
+/* 左侧菜单深色背景 */
+.ant-layout-sider {
+  background: #001529 !important;
+}
+
+.ant-layout-sider .ant-menu {
+  background: #001529;
+}
+
+/* 顶部子菜单栏 */
+.top-menu-bar {
+  background: #fff;
+  padding: 0 24px;
+  border-bottom: 1px solid #e8e8e8;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* 内容区域 */
+.page-content {
+  padding: 24px;
+  margin: 24px;
+  background: #fff;
+  border-radius: 8px;
+  min-height: calc(100vh - 180px);
+}
+
+/* 页面标题 */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.page-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Logo区域 */
+.logo {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 0;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.logo.collapsed {
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 卡片悬浮效果 */
+.ant-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+}
+
+/* 状态标签颜色 */
+.status-pending {
+  color: #d4b106;
+}
+.status-running {
+  color: #1677ff;
+}
+.status-completed {
+  color: #52c41a;
+}
+.status-failed {
+  color: #ff4d4f;
+}

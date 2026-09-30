@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">本地演示图片</title>
+  <desc id="desc">用于演示数据集预览的占位图</desc>
+  <rect width="640" height="360" rx="20" fill="#f0f5ff"/>
+  <circle cx="320" cy="145" r="52" fill="#d6e4ff"/>
+  <path d="M282 168l26-30 20 22 18-18 28 34h-92z" fill="#597ef7"/>
+  <circle cx="338" cy="129" r="8" fill="#597ef7"/>
+  <text x="320" y="250" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#595959">本地演示图片</text>
+</svg>
