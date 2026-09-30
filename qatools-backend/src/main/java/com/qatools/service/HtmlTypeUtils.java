@@ -1,5 +1,12 @@
 package com.qatools.service;
 
-/** Placeholder: original implementation is still required. */
-public class HtmlTypeUtils {
+/** Identifies HTML reference answers used by report-comparison evaluations. */
+public final class HtmlTypeUtils {
+
+    private HtmlTypeUtils() {
+    }
+
+    public static boolean isHtmlExpectedType(String expectedType) {
+        return "html".equalsIgnoreCase(expectedType) || "htm".equalsIgnoreCase(expectedType);
+    }
 }

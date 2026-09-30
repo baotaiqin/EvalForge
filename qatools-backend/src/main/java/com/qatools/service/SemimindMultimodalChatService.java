@@ -865,7 +865,7 @@ public class SemimindMultimodalChatService {
                 stringValue(dialog.get("workflow_id")),
                 stringValue(dialog.get("workflowId"))
         );
-        if (!sameSemimindId(agentId, itemAgentId)) {
+        if (!sameSemimindIdOrText(agentId, itemAgentId)) {
             return;
         }
 

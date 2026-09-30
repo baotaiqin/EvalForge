@@ -990,7 +990,7 @@ public class EvaluationService {
 
         CompletableFuture<Map<String, Object>> firstAttempt = isBlank(authorization)
                 ? agentChatService.chatWithAgentAsync(envUrl, agentId, agentType, targetId, "", question,
-                        null, null, null, authorization, apiUsername)
+                        null, null, authorization, apiUsername)
                 : agentChatService.chatWithAgentAsync(envUrl, agentId, agentType, targetId, "", question);
 
         return firstAttempt.thenCompose(result -> {
@@ -1028,7 +1028,7 @@ public class EvaluationService {
                 target.put("apiUsername", newUsername);
 
                 return agentChatService.chatWithAgentAsync(envUrl, agentId, agentType, targetId, "", question,
-                        null, null, null, newAuth, newUsername);
+                        null, null, newAuth, newUsername);
 
             } catch (Exception e) {
                 log.warn("401重试：重新登录失败，targetId={}, error={}", targetId, e.getMessage());
@@ -1876,5 +1876,4 @@ public class EvaluationService {
 
     }
 }
-
 

@@ -32,9 +32,9 @@ npm run preview
 
 ## 后端配置
 
-后端源码在 `qatools-backend/src`。敏感配置使用环境变量注入；`application.properties` 中仅保留本机和演示默认值，不包含工作区中的内网地址、账号凭据或授权令牌。连接真实数据库、MinIO 或 Agent 环境前，请自行设置对应环境变量。
+后端源码在 `qatools-backend/src`，已补齐 Maven 构建描述、Java 17 容器构建文件和本地数据库初始化 schema。启动步骤与环境变量说明见 [qatools-backend/README.md](qatools-backend/README.md)。
 
-**注意：当前工作区提供的后端 `pom.xml`、`Dockerfile` 和 `init.sql` 是 TODO 占位文件，Maven 依赖、后端镜像构建和数据库初始化定义不完整。因此本仓库包含后端源码，但暂不能据此直接构建、启动完整后端。**我没有猜测或补写缺失依赖和数据库结构。
+`qatools-backend/init.sql` 是根据当前 Java 存储服务中的 SQL 语句和行映射还原的开发 schema，不是原始生产数据库导出。它只包含 QATools 自己管理的业务表；Agent 平台所连接的远端系统表仍需由对应系统提供。配置中的地址和凭据必须通过环境变量设置为你有权访问的真实服务。
 
 ## Docker
 

@@ -74,23 +74,23 @@ public class SemiclawMultimodalChatService {
     private MinioStorageService minioStorageService;
 
     /** 对外可访问的 QATools 根地址，用于将 /api/... 相对资源解析成可下载 URL。 */
-    @Value("\${qatools.public-base-url:}")
+    @Value("${qatools.public-base-url:}")
     private String qatoolsPublicBaseUrl;
 
-    @Value("\${server.port:8081}")
+    @Value("${server.port:8081}")
     private String serverPort;
 
-    @Value("\${semiclaw.multimodal.image-timeout-seconds:300}")
+    @Value("${semiclaw.multimodal.image-timeout-seconds:300}")
     private long imageChatTimeoutSeconds;
 
-    @Value("\${semiclaw.multimodal.file-timeout-seconds:1200}")
+    @Value("${semiclaw.multimodal.file-timeout-seconds:1200}")
     private long fileChatTimeoutSeconds;
 
-    @Value("\${semiclaw.ws.auth-mode:ticket}")
+    @Value("${semiclaw.ws.auth-mode:ticket}")
     private String wsAuthMode;
 
     public SemiclawMultimodalChatService(
-            @Value("\${semiclaw.ssl.trust-all:false}") boolean trustAllSsl
+            @Value("${semiclaw.ssl.trust-all:false}") boolean trustAllSsl
     ) {
         HttpClient.Builder builder = HttpClient.newBuilder()
                 .connectTimeout(Duration.ofSeconds(CONNECT_TIMEOUT_SECONDS))

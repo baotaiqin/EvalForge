@@ -1,0 +1,10 @@
+.git
+.idea
+.vscode
+target
+uploads
+screenshots
+imetrology-data
+.env
+.env.*
+*.log
