@@ -57,6 +57,7 @@ Application properties support environment-variable overrides. The checked-in de
 - `DB_URL`, `DB_USER`, `DB_PASSWORD`: EvalForge application database.
 - `MINIO_ENDPOINT`, `MINIO_ACCESS_KEY`, `MINIO_SECRET_KEY`, `MINIO_BUCKET`: object storage.
 - `ENV_DB_DEV_*`, `ENV_DB_SIT_*`, `ENV_DB_PROD_*`: external Agent platform database/API connections.
+- `EVALFORGE_SEMICLAW_HOSTS`, `EVALFORGE_SEMIMIND_HOSTS`: platform host lists used for environment detection.
 - `SEMICLAW_*`: SemiClaw service account and WebSocket settings.
 - `EVAL_*`: test-account settings used when evaluating configured environments.
 - `PUBLIC_BASE_URL`: public address used in generated file links.
