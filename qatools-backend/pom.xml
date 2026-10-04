@@ -14,8 +14,8 @@
     <groupId>com.qatools</groupId>
     <artifactId>qatools-backend</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>qatools-backend</name>
-    <description>QATools evaluation platform backend</description>
+    <name>EvalForge Backend</name>
+    <description>EvalForge AI agent and language model evaluation backend</description>
 
     <properties>
         <java.version>17</java.version>

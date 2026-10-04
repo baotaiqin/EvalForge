@@ -1,4 +1,4 @@
--- QATools application database schema.
+-- EvalForge application database schema.
 -- Reconstructed from the SQL statements and row mappings in src/main/java/com/qatools/service.
 -- The external Agent/SemiMind/SemiClaw environment schemas are not owned by this project.
 -- All statements are idempotent; this file creates missing tables but does not modify existing data.

@@ -9,7 +9,7 @@ export const IS_MOCK = import.meta.env.VITE_USE_MOCK !== 'false'
 // 1. 优先读取 Vite 环境变量 VITE_API_BASE_URL
 // 2. 如果未配置，则默认使用同源地址，适合前后端同域部署或通过代理转发 /api
 //
-// 本地开发可在 qatools-app/.env.local 中配置:
+// 本地开发可在项目根目录的 .env.local 中配置:
 // VITE_API_BASE_URL=http://localhost:8081
 const rawBaseUrl = import.meta.env.VITE_API_BASE_URL || ''
 

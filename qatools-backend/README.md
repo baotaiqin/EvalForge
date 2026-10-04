@@ -1,6 +1,6 @@
-# QATools Backend
+# EvalForge Backend
 
-Java 17 / Spring Boot service for the QATools evaluation application.
+Java 17 / Spring Boot service for the EvalForge evaluation workbench.
 
 ## Requirements
 
@@ -17,7 +17,7 @@ Create the application database first:
 CREATE DATABASE qa_tools CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
-The service applies `init.sql` at startup by default. It creates the QATools-owned tables if they are missing. Set `SPRING_SQL_INIT_MODE=never` if the database account must not run DDL; in that case, apply `init.sql` with a database administrator before starting the service.
+The service applies `init.sql` at startup by default. It creates the application-owned tables if they are missing. Set `SPRING_SQL_INIT_MODE=never` if the database account must not run DDL; in that case, apply `init.sql` with a database administrator before starting the service.
 
 PowerShell example (replace local connection values as needed):
 
@@ -45,7 +45,7 @@ java -jar target/qatools-backend-1.0.0-SNAPSHOT.jar
 From this directory:
 
 ```sh
-docker build -t qatools-backend .
+docker build -t evalforge-backend .
 ```
 
 Run the image with MySQL and MinIO addresses reachable from the container. Supply `DB_URL` (or `DB_HOST`, `DB_PORT`, and `DB_NAME` with the `docker` Spring profile), `DB_USER`, `DB_PASSWORD`, and the `MINIO_*` variables. `PUBLIC_BASE_URL` controls links returned to the browser. The configured MinIO endpoint is also used to form browser-facing object URLs, so it must be reachable by both the backend and the browser.
@@ -54,7 +54,7 @@ Run the image with MySQL and MinIO addresses reachable from the container. Suppl
 
 Application properties support environment-variable overrides. The checked-in defaults are local examples and contain no working service credentials. Configure these groups for integrations you use:
 
-- `DB_URL`, `DB_USER`, `DB_PASSWORD`: QATools application database.
+- `DB_URL`, `DB_USER`, `DB_PASSWORD`: EvalForge application database.
 - `MINIO_ENDPOINT`, `MINIO_ACCESS_KEY`, `MINIO_SECRET_KEY`, `MINIO_BUCKET`: object storage.
 - `ENV_DB_DEV_*`, `ENV_DB_SIT_*`, `ENV_DB_PROD_*`: external Agent platform database/API connections.
 - `SEMICLAW_*`: SemiClaw service account and WebSocket settings.

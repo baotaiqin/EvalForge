@@ -9,7 +9,7 @@
       collapsed-width="64"
       class="fixed-sider"
     >
-      <div :class="['logo', { collapsed }]">{{ collapsed ? 'QA' : 'QATools' }}</div>
+      <div :class="['logo', { collapsed }]">{{ collapsed ? 'EF' : 'EvalForge' }}</div>
       <a-menu :selectedKeys="sideMenuKeys" theme="dark" mode="inline">
         <a-menu-item key="model-eval" @click="router.push('/model-eval/groups')">
           <template #icon><ClusterOutlined /></template>

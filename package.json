@@ -1,5 +1,6 @@
 {
-  "name": "qatools-app",
+  "name": "evalforge-app",
+  "description": "AI agent and language model evaluation workbench",
   "version": "1.0.0",
   "private": true,
   "type": "module",
