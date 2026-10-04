@@ -15,8 +15,8 @@ EvalForge 是一个面向 AI Agent 与大语言模型的评测工作台，将评
 ## 项目结构
 
 - `src/`：Vue 前端源码。
-- `qatools-backend/src/`：Java 后端源码。
-- `qatools-backend/init.sql`：应用自有数据表的还原版开发 schema。
+- `evalforge-backend/src/`：Java 后端源码。
+- `evalforge-backend/init.sql`：应用自有数据表的还原版开发 schema。
 
 ## 运行前端
 
@@ -43,9 +43,9 @@ npm run preview
 
 ## 运行后端
 
-后端依赖、环境变量、数据库初始化和 Docker 说明见 [qatools-backend/README.md](qatools-backend/README.md)。
+后端依赖、环境变量、数据库初始化和 Docker 说明见 [evalforge-backend/README.md](evalforge-backend/README.md)。
 
-`qatools-backend/init.sql` 根据现有 Java SQL 语句和行映射还原，是开发环境的基础 schema，不是原始生产数据库导出。它只创建 EvalForge 自有数据表；Agent 平台的外部数据表由对应平台提供。真实服务地址和凭据请通过本地环境变量配置，切勿提交密钥或私有服务地址。
+`evalforge-backend/init.sql` 根据现有 Java SQL 语句和行映射还原，是开发环境的基础 schema，不是原始生产数据库导出。它只创建 EvalForge 自有数据表；Agent 平台的外部数据表由对应平台提供。真实服务地址和凭据请通过本地环境变量配置，切勿提交密钥或私有服务地址。
 
 ## 构建前端镜像
 
